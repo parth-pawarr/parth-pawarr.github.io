@@ -1,0 +1,80 @@
+/* Custom CSS Variables */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --background-light: #f9fafb;
+    --transition-speed: 0.3s;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 1; /* Visible by default */
+    transform: translateY(0); /* No transform by default */
+}
+
+/* Only apply initial animation states when JavaScript is loaded */
+.js-loaded .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animation classes */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+.hover-scale {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Custom Utilities */
+.section-padding {
+    padding: 5rem 1rem;
+}
+
+.max-width-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Active link styles */
+nav a.active {
+    color: #0ea5e9; /* primary-600 color */
+    font-weight: 600;
+} 
